@@ -1,0 +1,11 @@
+# experiment dynamically creating rake namespaces
+# usage: rake one:hello
+["one","two"].each do |name|
+  namespace name do
+    task :hello do
+       puts "hello #{name}"
+    end
+  end
+end
+
+                   
