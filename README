@@ -1,0 +1,7 @@
+The projects in the directory tree consist of sample and practice code,
+using several different languages, tools, and techniques. These should
+loosly fit one of the following catagores.
+
+books - Sample code and variations of code from programming boos.
+lab - experiments with new libraries, languages, techniques.
+kata - targeted practice.
