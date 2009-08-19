@@ -1,0 +1,21 @@
+#! /usr/bin/env ruby
+
+require 'erb'
+require 'fileutils'
+
+include FileUtils
+
+name = ARGV[0]
+mkdir("#{name}")
+touch("#{name}/#{name}.html")
+
+
+File.open( "template.html.rhtml" ) do |f|
+           erb = ERB.new( f.read )
+           x = erb.result(binding)
+           File.open( "#{name}/#{name}.html", 'w' ) do |hfile|
+                      hfile.write x
+           end
+end
+
+cp("program.js.rhtml", "#{name}/#{name}.js")
