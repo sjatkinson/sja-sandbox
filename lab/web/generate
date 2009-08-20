@@ -10,7 +10,7 @@ mkdir("#{name}")
 touch("#{name}/#{name}.html")
 
 
-File.open( "template.html.rhtml" ) do |f|
+File.open( "templates/template.html.rhtml" ) do |f|
            erb = ERB.new( f.read )
            x = erb.result(binding)
            File.open( "#{name}/#{name}.html", 'w' ) do |hfile|
@@ -18,4 +18,4 @@ File.open( "template.html.rhtml" ) do |f|
            end
 end
 
-cp("program.js.rhtml", "#{name}/#{name}.js")
+cp("templates/program.js.rhtml", "#{name}/#{name}.js")
