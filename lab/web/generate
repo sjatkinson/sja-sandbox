@@ -6,6 +6,8 @@ require 'fileutils'
 include FileUtils
 
 name = ARGV[0]
+has_css = false
+has_js = false
 mkdir("#{name}")
 touch("#{name}/#{name}.html")
 
@@ -18,4 +20,5 @@ File.open( "templates/template.html.rhtml" ) do |f|
            end
 end
 
-cp("templates/program.js.rhtml", "#{name}/#{name}.js")
+cp("templates/program.js.rhtml", "#{name}/#{name}.js") if has_js
+cp("templates/style.css.rhtml", "#{name}/#{name}.css") if has_css

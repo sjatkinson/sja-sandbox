@@ -3,6 +3,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <title><%= "#{name}" %></title>
+    <% if has_css %>
+    <link rel="stylesheet" type="text/css" href="\"#{name}.css\"" />
+    <% end %>
   </head>
   <body>
     <pre><script src=<%= "\"#{name}.js\"" %></script></pre>
