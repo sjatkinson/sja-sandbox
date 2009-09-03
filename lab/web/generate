@@ -6,8 +6,8 @@ require 'fileutils'
 include FileUtils
 
 name = ARGV[0]
-has_css = false
-has_js = false
+has_css = true
+has_js = true
 mkdir("#{name}")
 touch("#{name}/#{name}.html")
 
