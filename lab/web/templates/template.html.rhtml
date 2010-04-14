@@ -3,9 +3,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <title><%= "#{name}" %></title>
+    <% if has_css %>
+    <link rel="stylesheet" type="text/css" href=<%= "\"#{name}.css\"" %> />
+    <% end %>
+    <% if has_js %>
+    <script type="text/javascript" src=<%= "\"#{name}.js\"" %></script>
+    <% end %>
   </head>
   <body>
-    <pre><script src=<%= "\"#{name}.js\"" %></script></pre>
     <p>Testing...</p>
   </body>
 </html>
